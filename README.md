@@ -83,4 +83,4 @@ To use the Python Reddit Nuker program, follow these steps:
 
 - The program uses the Colorama library to display a progress bar and text in color.
 
-- The program ONLY works for the Windows operating system, sorry MAC users ¯\_(ツ)_/¯ 
+- The program ONLY works for the Windows operating system, sorry MAC users ¯\\_(ツ)_/¯ 
