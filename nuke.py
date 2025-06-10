@@ -297,11 +297,11 @@ def _actionsChooser(chooserTitle: str, options: list[str]) -> int:
             choiceInt: int = int(choiceStr)
         
             if choiceInt < 1 or choiceInt > len(options):
-                sys.stdout.write(f'{'\033[1A\033[2K' * 1}\r')
+                sys.stdout.write(f'\033[1A\033[2K\r')
                 sys.stdout.flush()
                 continue
         except ValueError:
-            sys.stdout.write(f'{'\033[1A\033[2K' * 1}\r')
+            sys.stdout.write(f'\033[1A\033[2K\r')
             sys.stdout.flush()
             continue
 
