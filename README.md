@@ -1,22 +1,34 @@
 # Python Reddit Nuker
 
-The Python Reddit Nuker is a program designed to delete your comments and/or posts on Reddit. This readme file provides instructions on how to set up and use the program effectively.
+Python Reddit Nuker is a command-line tool that allows you to quickly and permanently delete your Reddit comments and/or posts in bulk. It uses the Reddit API (via PRAW) to authenticate your account and provides a simple interactive interface for selecting and confirming which content to remove. The tool displays progress and status updates in the terminal, making it easy to manage your Reddit data deletion securely and efficiently.
 
 ## Prerequisites
 
 Before using the Python Reddit Nuker, ensure that you have the following:
 
 1. Python: The program requires Python to be installed on your system. You can download Python from the official Python website: [python.org](https://www.python.org).
+2. [Anaconda or Miniconda](https://www.anaconda.com/docs/main) (recommended for managing environments).
+3. [Git](https://git-scm.com/) (for cloning the repository).
 
 ## Setup
 
 To set up the Python Reddit Nuker program, follow these steps:
 
-1. Download the Python Reddit Nuker program files.
+1. **Clone the repository using git:**
 
-2. Open a terminal or command prompt and navigate to the directory where the program files are located.
+   ```bash
+   git clone https://github.com/Maddox-RVS/Reddit-Nuker.git
+   cd Reddit-Nuker
+   ```
 
-3. Install the required dependencies by running the following command:
+2. **Create and activate a conda environment (recommended):**
+
+   ```bash
+   conda create -n reddit-nuker python=3.13.4
+   conda activate reddit-nuker
+   ```
+
+3. **Install the required dependencies:**
 
    ```bash
    pip install -r requirements.txt
@@ -40,47 +52,50 @@ To retrieve your Reddit account's `clientID` and `clientSecret`, you need to cre
 
 7. Once the app is created, you will see the `clientID` (clientID is underneath "personal use script") and `clientSecret` (clientSecret is next to "secret") on the app details page. Make a note of these values as you will need them during the setup process.
 
+8. Set the following environment variables in your terminal or system before running the program:
+
+   - `REDDIT_CLIENT_ID`
+   - `REDDIT_CLIENT_SECRET`
+
+   For example, on Windows Command Prompt:
+
+   ```cmd
+   set REDDIT_CLIENT_ID=your_client_id
+   set REDDIT_CLIENT_SECRET=your_client_secret
+   ```
+
+   Or on PowerShell:
+
+   ```powershell
+   $env:REDDIT_CLIENT_ID="your_client_id"
+   $env:REDDIT_CLIENT_SECRET="your_client_secret"
+   ```
+
 ## Usage
 
 To use the Python Reddit Nuker program, follow these steps:
 
 1. Open a terminal or command prompt and navigate to the directory where the program files are located.
 
-2. Open the `credentials.txt` file in a text editor.
+2. Make sure your `REDDIT_CLIENT_ID` and `REDDIT_CLIENT_SECRET` environment variables are set as described above.
 
-3. Enter your Reddit account credentials and the `clientID` and `clientSecret` obtained from the previous step in the following format:
-
-   ```
-   handle = <your_reddit_username>
-   passcode = <your_reddit_password>
-   clientID = <your_reddit_clientID>
-   clientSecret = <your_reddit_clientSecret>
-   ```
-
-   Replace `<your_reddit_username>`, `<your_reddit_password>`, `<your_reddit_clientID>`, and `<your_reddit_clientSecret>` with your actual Reddit account information.
-
-4. Save the `credentials.txt` file.
-
-5. Run the Python Reddit Nuker program by executing the following command:
+3. Run the Python Reddit Nuker program by executing the following command:
 
    ```bash
-   python <program_file_name>.py
+   python nuke.py
    ```
 
-   Replace `<program_file_name>` with the actual name of the program file.
+4. The program will prompt you to enter your Reddit username and password interactively.
 
-6. The program will prompt you to confirm whether you want to nuke your newest 100 comments and/or posts. Answer the prompts accordingly.
+5. The program will prompt you to choose a specific nuking action.
+
+6. The program will prompt you to confirm whether you want to nuke your comments and/or posts. Answer the prompts accordingly.
 
 7. If confirmed, the program will start deleting the selected comments and/or posts. The progress will be displayed with a progress bar.
-
-8. Once the nuking process is finished, the program will display a completion message.
 
 **Note:** Be cautious when using the Python Reddit Nuker as it permanently deletes your comments and/or posts. Deleted content cannot be recovered.
 
 ## Additional Notes
 
-- The program retrieves the newest 100 comments and/or posts and deletes them, it cannot do more than 100 at a time because PRAW respects reddit's request limit of a maximum of 100 requests at a time.
-
-- The program uses the Colorama library to display a progress bar and text in color.
-
-- The program ONLY works for the Windows operating system, sorry MAC users ¯\\_(ツ)_/¯ 
+- The program uses ANSI escape codes for some terminal effects (such as clearing lines), which may not be supported in all terminal environments. Regardless, the core program logic should work on any OS where Python, PRAW, and Rich are supported
+- **Be cautious: deleted comments and posts cannot be recovered.**

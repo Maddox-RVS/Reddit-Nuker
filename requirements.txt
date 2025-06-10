@@ -1,2 +1,3 @@
-colorama==0.4.6
-praw @ https://github.com/praw-dev/praw/archive/master.zip#sha256=3be9ea300df9e310fe78784c7b60dc67fde0decfbdb53a26cc3a482716711cbe
+praw==7.8.1
+prawcore==2.4.0
+rich==14.0.0
