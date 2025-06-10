@@ -6,7 +6,7 @@ Python Reddit Nuker is a command-line tool that allows you to quickly and perman
 
 Before using the Python Reddit Nuker, ensure that you have the following:
 
-1. Python: The program requires Python to be installed on your system. You can download Python from the official Python website: [python.org](https://www.python.org).
+1. Python: The program requires **Python (3.13.4 recommended)** to be installed on your system. You can download Python from the official Python website: [python.org](https://www.python.org).
 2. [Anaconda or Miniconda](https://www.anaconda.com/docs/main) (recommended for managing environments).
 3. [Git](https://git-scm.com/) (for cloning the repository).
 
