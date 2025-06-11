@@ -316,8 +316,8 @@ if __name__ == '__main__':
 
     # Ask for login credentials
     CONSOLE.rule('[light_sky_blue1]Login[/]', style='light_sky_blue1')
-    username: str = CONSOLE.input('[blue1]Enter your Reddit username[/]: ')
-    passcode: str = CONSOLE.input('[blue1]Enter your Reddit passcode[/]: ')
+    username: str = CONSOLE.input('[blue1]Enter your Reddit username[/]: ').strip()
+    passcode: str = CONSOLE.input('[blue1]Enter your Reddit passcode[/]: ').strip()
 
     sys.stdout.write(f'{'\033[1A' * 3}\r')
     sys.stdout.flush()
