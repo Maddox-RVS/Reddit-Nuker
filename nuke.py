@@ -332,7 +332,7 @@ if __name__ == '__main__':
 
     # Attempt to display total comments and posts
     try:
-        with CONSOLE.status('[blue1]Fetching Data[/]', spinner='dots'):
+        with CONSOLE.status('[blue1]Fetching Data[/]', spinner='dots', spinner_style='light_sky_blue1'):
             totalComments: int = getTotalComments(reddit)
             totalPosts: int = getTotalPosts(reddit)
     except prawcore.exceptions.OAuthException as e:
