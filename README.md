@@ -2,6 +2,8 @@
 
 Python Reddit Nuker is a command-line tool that allows you to quickly and permanently delete your Reddit comments and/or posts in bulk. It uses the Reddit API (via PRAW) to authenticate your account and provides a simple interactive interface for selecting and confirming which content to remove. The tool displays progress and status updates in the terminal, making it easy to manage your Reddit data deletion securely and efficiently.
 
+<img src="https://github.com/user-attachments/assets/3dab42e0-a541-4749-b2bc-599a99d3b0f0" alt="Reddit Nuker GIF" width="1000"/>
+
 ## Prerequisites
 
 Before using the Python Reddit Nuker, ensure that you have the following:
